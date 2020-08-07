@@ -1,43 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+    <head>
+        <title>밀당영어</title>
+        <meta name="description" content="카카오가 투자한 국내최초 1:1 집중관리 온라인 학원 / 전국 중고교 교과서 및 부교재까지 100% 완벽대비 가능">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="밀당영어">
+        <meta property="og:description" content="카카오가 투자한 국내최초 1:1 집중관리 온라인 학원 / 전국 중고교 교과서 및 부교재까지 100% 완벽대비 가능">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=1.0, minimum-scale=1.0, maximum-scale=1.0"/>
+        <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous">
+        </script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <link rel="icon" href="./images/mildang.png">
+        <link rel="stylesheet" href="animate.min.css">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-100968789-6"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-100968789-6');
+        </script>
+        <!-- Facebook Pixel Code -->
+        <script>
+            !function(f,b,e,v,n,t,s)
+            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '3291668150847910');
+            fbq('track', 'PageView');
+        </script>
+        <!-- KaKao Pixel Code -->
+            <script type="text/javascript" charset="UTF-8" src="//t1.daumcdn.net/adfit/static/kp.js"></script>
+            <script type="text/javascript">
+                kakaoPixel('5204070075277067362').pageView();
+            </script>
+        <!-- Taboola Pixel Code -->
+        <script type='text/javascript'>
+            window._tfa = window._tfa || [];
+            window._tfa.push({notify: 'event', name: 'page_view', id: 1235199});
+            !function (t, f, a, x) {
+                if (!document.getElementById(x)) {
+                    t.async = 1;t.src = a;t.id=x;f.parentNode.insertBefore(t, f);
+                }
+            }(document.createElement('script'),
+            document.getElementsByTagName('script')[0],
+            '//cdn.taboola.com/libtrc/unip/1235199/tfa.js',
+            'tb_tfa_script');
+        </script>
+        <noscript>
+            <img src='//trc.taboola.com/1235199/log/3/unip?en=page_view'
+                width='0' height='0' style='display:none'/>
+        </noscript>
+        <style>
+            .opacityEffect {
+                animation-duration: 1s;
+                animation-name: opacity;
+            }
+            @keyframes opacity {
+                from {
+                    opacity: 0;
+                }
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+                to {
+                    opacity: 1;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <noscript>You need to enable JavaScript to run this app.</noscript>
+        <div id="root"></div>
+    </body>
 </html>
