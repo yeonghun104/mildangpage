@@ -172,8 +172,11 @@ const MainPage = (props) => {
             <div>
                 <div className="card" style={{position:"fixed",bottom:0, width: "100%"}}>
                     <div className="card-body">
-                        <div style={{marginBottom: "12px"}}>
+                        <div style={{marginBottom: "4px"}}>
                             <span style={{fontWeight:"bold", color:"#4CAF50"}}>이름과 전화번호</span>를 입력해주세요
+                        </div>
+                        <div style={{marginBottom: "12px", fontSize: 12}}>
+                            *학부모님의 경우 이름 뒤에 학생의 학년과 "학부형"을 같이 입력해주세요 <span style={{fontWeight:"bold", color:"#4CAF50"}}>예) 홍길동 고1 학부형</span>
                         </div>
                         <div className="form-group">
                             <input style={{display:"inline-block", width:"30%"}} type="text" className="form-control" id="name" aria-describedby="emailHelp" placeholder="이름" onChange={handleName} value={name}/>
