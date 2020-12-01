@@ -71,18 +71,16 @@ const MainPage = (props) => {
             setIsApplied(1)
             setProgress(true)
 
-            var params = {
-                name : name,
-                applicantId : phoneNumber,
-                type : 1,
-                studyTime : 0,
-                path:path,
-                counselingTime:"아무 때나 가능"
+            let params = {
+                name: name,
+                phoneNumber: phoneNumber,
+                type: 4,
+                site: path
             };
 
             window.$.ajax({
                 type: 'POST',
-                url: 'https://english.management/dev/trials',
+                url: 'https://english.management/dev/clients',
                 data: JSON.stringify(params),
                 success: function(data) {
                     setProgress(false)
@@ -102,6 +100,24 @@ const MainPage = (props) => {
                     window._tfa = window._tfa || [];
                     window._tfa.push({notify: 'event', name: 'lead3', id: 1235199});
                 },
+                contentType: "application/json",
+                dataType: 'json'
+            });
+
+            params = {
+                name: name,
+                applicantId: phoneNumber,
+                type: 1,
+                studyTime: 0,
+                path: path,
+                counselingTime: "아무 때나 가능"
+            };
+
+            window.$.ajax({
+                type: 'POST',
+                url: 'https://english.management/dev/trials',
+                data: JSON.stringify(params),
+                success: function(data) {},
                 contentType: "application/json",
                 dataType: 'json'
             });
